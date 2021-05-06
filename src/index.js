@@ -1,13 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-
   const taskInput = document.querySelector("#new-task-description")
   const taskForm = document.querySelector("#create-task-form")
-
 
   taskForm.addEventListener('submit', function(e) {
     e.preventDefault()
     const newTask = taskInput.value
-
 
       const list = document.querySelector('#tasks')
       const newLi = document.createElement('li')
@@ -21,10 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
       deleteButton.addEventListener('click', function(e) {
         newLi.remove()
       })
-
       taskForm.reset()
   })
-
-
-
 });
